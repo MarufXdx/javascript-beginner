@@ -12,19 +12,21 @@ console.table({pi, maruf, hasan , user});
 
 /* data types */
 
+// # primitive 7 types
 // number => 2 to power 53
 // bigint
 // string => ""
 // boolean => true/false
-// null => standalone value
-// undefined => 
+// null => standalone value/ empty
+// undefined => not assigned a value
 // symbol => unique
-// object
-// array
 console.log(typeof undefined); // undefined
 console.log(typeof null); // object
 
-
+// # reference (non-primitive) 3 types
+// object => {}  // data type => object
+// array => [] // data type => object
+// function => function(){} //data type => object function
 
 
 
@@ -52,3 +54,39 @@ console.log(Boolean(isTrue));
 // "" => false; "Maruf" => true
 // undefined => false; null => false
 
+ 
+
+/* operators */
+
+console.log("1" + 2 + 2);  // 122 => 1st one is a string so all will be count as string
+console.log(1 + 2 + "2");  // 32 => 1st two are number so those will be added but because of 3rd one it's type will be string
+console.log(+true); // 1
+console.log(+""); // 0
+
+
+
+/* prefix and postfix */
+
+let i = 1;
+console.log(i++); // postfix; first it will show i value (1) then it will increase to 2;
+console.log(++i); // prefix; first it will increase to (3) then it will show the value;
+
+
+/* conversion */
+
+// don't use ==, use ===
+console.log ("2" > 1); // true; "2" => 2 
+console.log("01" == 1); // true; "01" => 1
+console.log(true == 1); // true; true => 1
+
+console.log(null == 0); // false; null did not converted to a number only happens with ==
+console.log(null > 0); // false; null => 0
+console.log(null >= 0); // true; null => 0
+
+console.log(undefined == 0); // false; undefined can't be converted to a number
+console.log(undefined > 0); // false;
+console.log(undefined >= 0); //false;
+
+// to check value as well as type use ===
+
+console.log( "2" === 2); //false; "2" is a string
